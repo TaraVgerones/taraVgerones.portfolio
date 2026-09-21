@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio.">
+  <title>Tara Gerones - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            revolver: '#241937',
+            london: '#C89BCA',
+            deluge: '#7C55A5',
+            bali: '#7C94AA',
+            ink: '#181124',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-ink text-white antialiased selection:bg-london selection:text-revolver">
+  <!-- <div class="noise" aria-hidden="true"></div> -->
+
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:pt-6">
+    <nav id="navbar" class="island mx-auto flex max-w-5xl items-center justify-between rounded-full border border-white/10 bg-revolver/75 px-4 py-3 shadow-2xl shadow-black/25 backdrop-blur-xl sm:px-6" aria-label="Main navigation">
+      <a href="#home" class="font-display text-sm font-semibold tracking-tight sm:text-base" aria-label="Tara Gerones, back to home">Tara Gerones<span class="text-london">.</span></a>
+
+      <button id="menu-button" class="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-white md:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <div class="hidden items-center gap-1 md:flex">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#organizations">Organizations</a>
+        <a class="nav-link" href="#certifications">Certifications</a>
+        <a class="nav-link" href="#works">Works</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mx-auto mt-2 hidden max-w-md overflow-hidden rounded-3xl border border-white/10 bg-revolver/95 p-2 shadow-2xl backdrop-blur-xl md:hidden">
+      <a class="mobile-link" href="#home">Home</a>
+      <a class="mobile-link" href="#about">About</a>
+      <a class="mobile-link" href="#organizations">Organizations</a>
+      <a class="mobile-link" href="#certifications">Certifications</a>
+      <a class="mobile-link" href="#works">Works</a>
+      <a class="mobile-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="relative flex min-h-screen items-center overflow-hidden px-5 pb-16 pt-32 sm:px-8">
+      <div class="orb orb-one" aria-hidden="true"></div>
+      <div class="orb orb-two" aria-hidden="true"></div>
+      <div class="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_.85fr]">
+        <div class="relative z-10 reveal">
+          <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[.24em] text-london"><span class="h-px w-8 bg-london"></span>Welcome to my portfolio</p>
+          <h1 class="font-display text-5xl font-semibold leading-[.95] tracking-[-.055em] sm:text-7xl lg:text-[6rem]">Hi, I’m <span class="gradient-text">Tara!</span></h1>
+          <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/65 sm:text-xl">BSIT in Web &amp; Mobile Development Student</p>
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a href="#works" class="button-primary">Explore my work</a>
+            <a href="#contact" class="button-secondary">Let’ Connect</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap relative mx-auto aspect-[4/5] w-full max-w-md reveal" style="--delay: .12s">
+          
+          <!-- Outer line/border -->
+          <div class="absolute -inset-4 rounded-[2.75rem] border border-london/15" aria-hidden="true"></div>
+
+          <!-- Photo container -->
+          <div class="portrait-placeholder relative h-full overflow-hidden rounded-[2.25rem] border border-white/10" >
+            <img
+              src="assets/my-photo.jpg"
+              alt="Portrait of Tara Gerones"
+              class="h-full w-full object-cover"
+            >
+
+            <!-- brief info -->
+            <div
+              class="absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl border border-white/10 bg-revolver/70 px-4 py-3 backdrop-blur-md" >
+              <span class="text-xs text-white/60">
+                Based in Metro Manila 
+              </span>
+
+              <span class="flex items-center gap-2 text-xs font-medium">
+                <span class="h-2 w-2 animate-pulse rounded-full bg-london"></span> Open to Internship
+              </span>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- <section class="border-y border-white/5 bg-revolver/30 py-20" aria-labelledby="featured-title">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mb-8 flex items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow">Selected highlights</p>
+            <h2 id="featured-title" class="section-title">A glimpse of my work.</h2>
+          </div>
+          <div class="hidden gap-2 sm:flex">
+            <button class="carousel-button" data-carousel="featured" data-direction="prev" aria-label="Previous project">←</button>
+            <button class="carousel-button" data-carousel="featured" data-direction="next" aria-label="Next project">→</button>
+          </div>
+        </div>
+
+        <div id="featured-carousel" class="hide-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
+          <article class="project-card group snap-start">
+            <div class="media-placeholder media-two"><p>Web Development</p></div>
+            <div class="p-5"><p class="text-xs uppercase tracking-[.2em] text-london">Website · Front-end</p><h3 class="mt-2 font-display text-xl font-semibold">Project Name</h3></div>
+          </article>
+
+
+          <article class="project-card group snap-start">
+            <div class="media-placeholder media-three"><span>03</span><p>Visual Story</p></div>
+            <div class="p-5"><p class="text-xs uppercase tracking-[.2em] text-london">Photography · Portrait</p><h3 class="mt-2 font-display text-xl font-semibold">Project Name</h3></div>
+          </article>
+
+
+          <article class="project-card group snap-start">
+            <div class="media-placeholder media-four"><span>04</span><p>Motion Preview</p></div>
+            <div class="p-5"><p class="text-xs uppercase tracking-[.2em] text-london">Video · Prototype</p><h3 class="mt-2 font-display text-xl font-semibold">Project Name</h3></div>
+          </article>
+
+        </div>
+      </div>
+    </section> -->
+
+    <!-- About Me -->
+    <section id="about" class="section-shell soft-section scroll-mt-28">
+      <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
+        <div class="reveal">
+          <p class="eyebrow">About me</p>
+          <h2 class="section-title">Curious mind.<br><span class="text-white/35">Purposeful craft.</span></h2>
+        </div>
+        <div class="space-y-6 text-base leading-8 text-white/62 reveal" style="--delay: .1s">
+          <p>I’m a 4th-year Bachelor of Science in Information Technology student specializing in Web and Mobile Applications. My passion for creating visually appealing web and mobile designs is one of the reasons I chose to pursue IT after taking ICT in Senior High School.</p>
+          <p>I enjoy turning ideas into reality through design and development, especially when I get to see a simple concept become something useful, interactive, and innovative.</p>
+          <p>Beyond designing and developing, I also enjoy organizing my work and collaborating with others. This encouraged me to actively participate in university organizations, where I gained new experiences, learned from different people, and discovered opportunities to grow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizations -->
+    <section id="organizations" class="section-shell scroll-mt-28">
+      <!-- <section id="organizations" class="section-shell scroll-mt-28 border-y border-white/5 bg-revolver/25"> -->
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-12 max-w-2xl reveal">
+          <p class="eyebrow">Community &amp; Leadership</p>
+          <h2 class="section-title">Organizations.</h2>
+        </div>
+
+        <div class="grid items-start gap-4 md:grid-cols-2">
+          
+          <!-- Organization 1 -->
+          <article class="organization-card reveal">
+            <div class="organization-logo">
+              <img
+                src="assets/organization/AITS.png"
+                alt="Organization name logo"
+                width="80"
+                height="80"
+                decoding="async">
+            </div>
+
+            <div class="organization-content">
+              <p class="organization-date">2026–Present</p>
+              <h3>Alliance of Information Technology Students (AITS)</h3>
+              <p class="organization-role">
+                Member 
+              </p>
+            </div>
+          </article>
+
+          <!-- Organization 2 -->
+          <article class="organization-card reveal">
+            <div class="organization-logo">
+              <img
+                src="assets/organization/AITS.png"
+                alt="Organization name logo"
+                width="80"
+                height="80"
+                decoding="async">
+            </div>
+
+            <div class="organization-content">
+              <p class="organization-date">2024–2026</p>
+              <h3>Alliance of Information Technology Students (AITS)</h3>
+              <p class="organization-role">
+                Director for Documentations
+              </p>
+            </div>
+          </article>
+
+          <!-- Organization 3 -->
+          <article class="organization-card reveal">
+            <div class="organization-logo">
+              <img
+                src="assets/organization/ASTI.PNG"
+                alt="Organization name logo"
+                width="80"
+                height="80"
+                decoding="async">
+            </div>
+
+            <div class="organization-content">
+              <p class="organization-date">2024–2025</p>
+              <h3>Association of Student Technopreneurs and Innovators (ASTI)</h3>
+              <p class="organization-role">
+                Co-Director for Logistics
+              </p>
+            </div>
+          </article>
+
+          <!-- Organization 4 -->
+          <article class="organization-card reveal">
+            <div class="organization-logo">
+              <img
+                src="assets/organization/AITS.png"
+                alt="Organization name logo"
+                width="80"
+                height="80"
+                decoding="async">
+            </div>
+
+            <div class="organization-content">
+              <p class="organization-date">2023–2024</p>
+              <h3>Alliance of Information Technology Students (AITS)</h3>
+              <p class="organization-role">
+                Junior Officer for Logistics
+              </p>
+            </div>
+          </article>
+
+          <!-- Organization 5 -->
+          <article class="organization-card reveal">
+            <div class="organization-logo">
+              <img
+                src="assets/organization/JPCS.png"
+                alt="Organization name logo"
+                width="80"
+                height="80"
+                decoding="async">
+            </div>
+
+            <div class="organization-content">
+              <p class="organization-date">2023–2024</p>
+              <h3>Junior Philippine Computer Society (JPCS)</h3>
+              <p class="organization-role">
+                Member
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Certifications -->
+    <section id="certifications" class="section-shell soft-section scroll-mt-28">
+      <!-- <section id="certifications" class="section-shell scroll-mt-28 border-y border-white/5 bg-revolver/25"> -->
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-12 max-w-2xl reveal">
+          <p class="eyebrow">Learning in Progress</p>
+          <h2 class="section-title">Certifications.</h2>
+        </div>
+
+        <!-- Certification cards grid -->
+        <div class="grid gap-4 md:grid-cols-2">
+          <a href="https://www.credly.com/badges/650fc220-7c7b-4c9b-9b85-c2915de5546e/public_url" target="_blank" rel="noopener noreferrer" class="certificate-card reveal" aria-label="Verify Certification Title" >
+            <div class="certificate-thumb">
+              <img src="assets/PMI-Logo.png" alt="PMI badge" class="h-full w-full object-contain p-1">
+            </div>
+            <div class="flex flex-1 flex-col justify-center -translate-y-0.5">
+              <h3 class="font-display text-lg font-semibold leading-tight">
+                PMI Project Management Ready™
+              </h3>
+              <p class="mt-1 text-sm text-white/40">
+                Project Management Institute · 2026
+              </p>
+            </div>
+          </a>
+          
+          <a href="https://www.credly.com/badges/ae0613b0-1489-40d6-a458-3a684bdd75cc/public_url" target="_blank" rel="noopener noreferrer" class="certificate-card reveal" aria-label="Verify Certification Title" >
+            <div class="certificate-thumb">
+              <img src="assets/Python-Logo.png" alt="Python badge" class="h-full w-full object-contain p-1">
+            </div>
+            <div class="flex flex-1 flex-col justify-center -translate-y-0.5">
+              <h3 class="font-display text-lg font-semibold leading-tight">
+                IT Specialist - Python
+              </h3>
+              <p class="mt-1 text-sm text-white/40">
+                Certiport · 2025
+              </p>
+            </div>
+          </a>
+
+          <a href="https://www.credly.com/badges/66d79ab2-4d22-48f0-a48b-590bef410b0a/public_url" target="_blank" rel="noopener noreferrer" class="certificate-card reveal" aria-label="Verify Certification Title" >
+            <div class="certificate-thumb">
+              <img src="assets/Networking-Logo.png" alt="Networking badge" class="h-full w-full object-contain p-1">
+            </div>
+            <div class="flex flex-1 flex-col justify-center -translate-y-0.5">
+              <h3 class="font-display text-lg font-semibold leading-tight">
+                Cisco Certified Support Technician Networking
+              </h3>
+              <p class="mt-1 text-sm text-white/40">
+                Certiport · 2025
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Portfolio -->
+    <section id="works" class="section-shell scroll-mt-28">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end reveal">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2 class="section-title">My Works.</h2>
+          </div>
+          <div class="flex flex-wrap gap-2" role="tablist" aria-label="Filter works">
+            <button class="filter-pill active" data-filter="websites" role="tab" aria-selected="true">Websites</button>
+            <button class="filter-pill active" data-filter="mobile" role="tab" aria-selected="true">Mobile Apps</button>
+            <button class="filter-pill active" data-filter="photography" role="tab" aria-selected="true">Photography</button>
+          </div>
+        </div>
+
+        <div id="works-grid" class="grid gap-5 md:grid-cols-2">
+          
+          <!-- Websites -->
+          <!-- FAIRALL -->
+          <article class="work-item" data-category="websites">
+            <div class="work-visual aspect-[2/1]">
+              <img
+                src="assets/websites/Fairall.png"
+                alt="fairall preview"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+              <div class="work-meta"><div class="w-full"><p class="work-tag">Mobile UI/UX Designer | Front-End Developer | QA</p>
+                <h3> <a href="https://fairall.site/" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  FAIRALL: Beneficiary and Donor Management System with AI Integrated Report Generation Using Llama LLM for Fairplay For All Foundation (Web Version)
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Venusia -->
+          <article class="work-item" data-category="websites">
+            <div class="work-visual aspect-[2/1]">
+              <img
+                src="assets/websites/venusia.png"
+                alt="venusia preview"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+              <div class="work-meta"><div class="w-full"><p class="work-tag">Front-End Developer | QA</p>
+                <h3> <a href="https://venusia.site.je/" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                 Venusia: An E-Commerce Website for Women’s Clothing
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Petalgram -->
+          <article class="work-item" data-category="websites">
+            <div class="work-visual aspect-[2/1]">
+              <img
+                src="assets/websites/petalgram.png"
+                alt="petalgram preview"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+              <div class="work-meta"><div class="w-full"><p class="work-tag">Web Designer</p>
+                <h3> <a href="https://ashleeeeeq.github.io/innovAce-finalProject/" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                   Petalgram: A Web-Based Flower Shop
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pokemonix -->
+          <article class="work-item" data-category="websites">
+            <div class="work-visual aspect-[2/1]">
+              <img
+                src="assets/websites/pokemonix.jpg"
+                alt="pokemonix preview"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+              <div class="work-meta"><div class="w-full"><p class="work-tag">Front-End Developer</p>
+                <h3> <a href="https://pokemonix.github.io/" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                   Pokemonix: Pokémon-Themed Web Store Inspired by Pokémon GO’s Online Store
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Mobile Apps -->
+           <!-- FAIRALL -->
+           <article class="work-item" data-category="mobile">
+            <div class="work-visual aspect-[4/3]">
+              <img
+                src="assets/mobile/Fairall-mobile.png"
+                alt="fairall preview"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+              <div class="work-meta"><div class="w-full"><p class="work-tag">Mobile UI/UX Designer | Front-End Developer | QA</p>
+                <h3> <a href="https://www.figma.com/proto/MKfjwamOtCPrrA8Z4UqoAV/FAIRALL-Mobile?node-id=1508-8473&viewport=850%2C936%2C0.45&t=2fPmgtO3JaYqzi04-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  FAIRALL: Beneficiary and Donor Management System with AI Integrated Report Generation Using Llama LLM for Fairplay For All Foundation (Mobile Version)
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </article>
+
+           <!-- Klasko -->
+           <article class="work-item" data-category="mobile">
+            <div class="work-visual aspect-[4/3]">
+              <img
+                src="assets/mobile/klasko.png"
+                alt="klasko preview"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+              <div class="work-meta"><div class="w-full"><p class="work-tag">UI/UX Designer and Front-End Developer</p>
+                <h3> <a href="https://drive.google.com/file/d/1fbXsa12NcrOibW2TMp8Bwb3ZvjIQBUpd/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  KlasKo : A Mobile Application for Student Information Management
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Photography -->
+           <article class="work-item md:col-span-2" data-category="photography">
+            <div class="work-visual aspect-[2/1]" >
+              <img
+                src="assets/photography/taho.webp"
+                alt="taho photo"
+                class="absolute inset-0 h-full w-full object-cover">
+          </article>
+
+           <!-- <article class="work-item" data-category="photography">
+            <div class="work-visual aspect-[4/5]" >
+              <img
+                src="assets/photography/sunset-beach.webp"
+                alt="beach sunset"
+                class="absolute inset-0 h-full w-full object-cover">
+            </div>
+          </article>
+
+          <article class="work-item" data-category="photography">
+            <div class="work-visual aspect-[4/5]" >
+              <img
+                src="assets/photography/street-cleaner.webp"
+                alt="street cleaner photo"
+                class="absolute inset-0 h-full w-full object-cover">
+          </article>
+
+          <article class="work-item" data-category="photography">
+            <div class="work-visual aspect-[4/3]" >
+              <img
+                src="assets/photography/sunset-beach2.webp"
+                alt="sunset beach2 photo"
+                class="absolute inset-0 h-full w-full object-cover">
+          </article>
+          
+          
+          <article class="work-item" data-category="photography">
+            <div class="work-visual aspect-[4/3]" >
+              <img
+                src="assets/photography/zambales.webp"
+                alt="zambales photo"
+                class="absolute inset-0 h-full w-full object-cover">
+          </article>
+          
+          <article class="work-item" data-category="photography">
+            <div class="work-visual aspect-[4/3]" >
+              <img
+                src="assets/photography/zipline.webp"
+                alt="zipline photo"
+                class="absolute inset-0 h-full w-full object-cover">
+          </article>
+
+
+          <article class="work-item" data-category="photography">
+            <div class="work-visual aspect-[4/3]" >
+              <img
+                src="assets/photography/IT-olympics.webp"
+                alt="IT Olympics photo"
+                class="absolute inset-0 h-full w-full object-cover">
+          </article> -->
+        
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="px-5 pb-10 pt-16 sm:px-8 sm:pt-24 scroll-mt-24">
+      <div class="contact-panel relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 px-6 py-14 sm:px-12 sm:py-20">
+        <div class="orb orb-contact" aria-hidden="true"></div>
+
+        <!-- Centered heading -->
+        <div class="relative z-10 text-center reveal">
+          <p class="contact-heading">Get in touch</p>
+        </div>
+
+        <!-- Contact links without top border -->
+        <div class="relative z-10 mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="https://github.com/TaraVgerones" target="_blank" class="contact-link">
+            <span>GitHub</span>
+            <small>@TaraVgerones</small>
+          </a>
+
+          <a href="https://www.linkedin.com/in/tara-victoria-gerones-629063381?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank"class="contact-link">
+            <span>LinkedIn</span>
+            <small>Tara Victoria Gerones</small>
+          </a>
+
+          <a href="mailto:taravictoriag@gmail.com" target="_blank" class="contact-link">
+            <span>Email</span>
+            <small>taravictoriag@gmail.com</small>
+          </a>
+
+          <a class="contact-link">
+            <span>Phone</span>
+            <small>+63 919 377 4851</small>
+          </a>
+        </div>
+
+        <!-- Send Email Button -->
+        <div class="relative z-10 mt-8 flex justify-center reveal">
+          <a href="mailto:taravictoriag@gmail.com" class="button-primary">
+            Send Email
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-5 py-8 sm:px-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-white/5 pt-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span id="year"></span> Tara Gerones. All rights reserved.</p>
+      <a href="#home" class="transition hover:text-london">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
