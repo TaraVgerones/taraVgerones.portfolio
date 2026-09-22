@@ -42,54 +42,6 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-// const featuredCarousel = document.querySelector('#featured-carousel');
-// let carouselTimer;
-
-// function moveCarousel(direction = 'next') {
-//   const card = featuredCarousel.querySelector('.project-card');
-//   const distance = card.getBoundingClientRect().width + 20;
-//   const isAtEnd = featuredCarousel.scrollLeft + featuredCarousel.clientWidth >= featuredCarousel.scrollWidth - 24;
-//   const isAtStart = featuredCarousel.scrollLeft <= 24;
-
-//   if (direction === 'next' && isAtEnd) {
-//     featuredCarousel.scrollTo({ left: 0, behavior: 'smooth' });
-//   } else if (direction === 'prev' && isAtStart) {
-//     featuredCarousel.scrollTo({ left: featuredCarousel.scrollWidth, behavior: 'smooth' });
-//   } else {
-//     featuredCarousel.scrollBy({
-//       left: direction === 'next' ? distance : -distance,
-//       behavior: 'smooth'
-//     });
-//   }
-// }
-
-// function startCarousel() {
-//   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-//   clearInterval(carouselTimer);
-//   carouselTimer = setInterval(() => moveCarousel('next'), 2000);
-// }
-
-// function stopCarousel() {
-//   clearInterval(carouselTimer);
-// }
-
-// document.querySelectorAll('[data-carousel]').forEach((button) => {
-//   button.addEventListener('click', () => {
-//     moveCarousel(button.dataset.direction);
-//     startCarousel();
-//   });
-// });
-
-// featuredCarousel.addEventListener('mouseenter', stopCarousel);
-// featuredCarousel.addEventListener('mouseleave', startCarousel);
-// featuredCarousel.addEventListener('focusin', stopCarousel);
-// featuredCarousel.addEventListener('focusout', startCarousel);
-// document.addEventListener('visibilitychange', () => {
-//   document.hidden ? stopCarousel() : startCarousel();
-// });
-
-// startCarousel();
-
 const filterButtons = [...document.querySelectorAll('.filter-pill')];
 const workItems = [...document.querySelectorAll('.work-item')];
 
